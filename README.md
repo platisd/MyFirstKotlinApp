@@ -40,29 +40,29 @@ fun main(args: Array<String>) {
 
 ## Control flow in Kotlin
 The following code examples were taken from [kotlinlang.org](https://kotlinlang.org/docs/reference/control-flow.html).
- 
+
 ### If
- 
+
 ```kotlin
- // Traditional usage 
- var max = a 
+ // Traditional usage
+ var max = a
  if (a < b) max = b
- 
- // With else 
+
+ // With else
  var max: Int
  if (a > b) {
      max = a
  } else {
      max = b
  }
-  
- // As expression 
+
+ // As expression
  val max = if (a > b) a else b
- 
+
 ```
- 
+
 Since `if` can be used as an expression, I find the following usage the most peculiar:
- 
+
 ```kotlin
 val max = if (a > b) {
     print("Choose a")
@@ -73,10 +73,10 @@ val max = if (a > b) {
 }
 
 ```
- 
+
 ### When
 `when` is the equivalent of `switch`, but on **steroids**. It can even do _ranges_! :muscle:
- 
+
 ```kotlin
 
 when (x) {
@@ -99,10 +99,10 @@ when (x) {
     else -> print("s does not encode x")
 }
 ```
- 
+
 ### For
 Kotlin has a Python-like `for`.
- 
+
 ```kotlin
 for (message in uartMessages){
     print(uartMessage)
@@ -115,7 +115,7 @@ for (i in 1..3) {
 ```
 
 ### While
-`while` looks more... conventional but it's useful that in the case of `do... while` you can access variables that were defined locally. No more having to initialize them outside!
+`while` looks more... conventional but it's useful that in the case of `do ... while` you can access variables that were defined locally. No more having to initialize them outside!
 
 ```kotlin
 while (x > 0) {
@@ -127,9 +127,11 @@ do {
 } while (y != null) // y is visible here!
 
 ```
- 
+
 ## Classes
 Classes do have some more _special_ syntax and grammar which will take too much time to cover in this study circle. Please refer to [kotlinlang.org](https://kotlinlang.org/docs/reference/classes.html) for more information.
 
 ## Assignment
-Create an Android application which, upon a button press, sends a GET request to an external server that responds with the device's IP address which is then displayed on the screen. _Pro tip_ start by opening this project into your Android Studio (**version 3.0.0 or higher**) and use [Fuel](https://github.com/kittinunf/Fuel) which has already been set up for you.
+Create an Android application which, upon a button press, sends a GET request to an external server that responds with the device's IP address which is then displayed on the screen.
+
+_Pro tip:_ start by opening this project into your Android Studio (**version 3.0.0 or higher**) and use [Fuel](https://github.com/kittinunf/Fuel) which has already been set up for you.
