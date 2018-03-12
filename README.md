@@ -12,6 +12,9 @@ In this study circle we will first get to run a command-line `Hello World` Kotli
 * A laptop that has the above installed :neckbeard:
 
 ## Hello World
+**Αρχή ήμισυ παντός** - Ancient greek proverb translated into "The beginning is the half of everything".
+
+It is attributed to various philosophers (i.e. Aristotle, Plato, Pythagoras). It implies that getting over the initial burden of _starting_ the pursue of a goal, is equivalent to half of the effort required to accomplish it. Practically, this means that after this workshop we will be half-done with porting all our Android applications to Kotlin. :sweat_smile:  
 
 ### Install Kotlin to your system
 Do yourself a favor and do this on a modern Ubuntu 16.04 or later: `sudo snap install --classic kotlin`
