@@ -6,6 +6,11 @@ Kotlin looks to me like something in between JAVA and Python. Moreover, it looks
 
 In this study circle we will first get to run a command-line `Hello World` Kotlin program, then go over the basic control flow syntax and finally work on a small assignment.
 
+## Prerequisites
+* Android Studio 3.0.0 or later
+* JAVA 8
+* A laptop that has the above installed :neckbeard:
+
 ## Hello World
 
 ### Install Kotlin to your system
