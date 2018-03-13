@@ -128,6 +128,45 @@ do {
 
 ```
 
+## Null safety
+One of the most prominent features of Kotlin is _null safety_. I understand is as [inherent support for null safe operations](https://kotlinlang.org/docs/reference/null-safety.html) so we do not have to explicitly check if something is `null`. This can also be extended to types, which reminds me of Haskell's [Maybe](https://hackage.haskell.org/package/base-4.10.1.0/docs/Data-Maybe.html). Let's see how.
+
+### Nullable types and Non-Null Types
+```kotlin
+var a: String = "abc"
+a = null // compilation error
+```
+To permit the possibility for a `null` we can use `?`.
+
+```kotlin
+var b: String? = "abc"
+b = null // ok
+```
+### Null-safe calls
+The following returns b.length if b is not `null`, and `null` otherwise. The type of this expression is **Int?**.
+
+```kotlin
+b?.length
+```
+### Elvis operator ?:
+Using `?:` we write neat "if not null else" statements.
+```kotlin
+// Instead of this:
+val l: Int = if (b != null) b.length else -1
+
+// We can write this:
+val l = b?.length ?: -1
+
+```
+### !!
+If we have to throw an exception if something is `null`, we can use the `!!` operator.
+
+```kotlin
+val l = b!!.length // Will return the non-null type or exception!
+```
+
+If the expression to the left of ?: is not `null`, the elvis operator returns it, otherwise it returns the expression to the right. Note that the right-hand side expression is evaluated only if the left-hand side is `null`.
+
 ## Classes
 Classes do have some more _special_ syntax and grammar which will take too much time to cover in this study circle. Please refer to [kotlinlang.org](https://kotlinlang.org/docs/reference/classes.html) for more information.
 
