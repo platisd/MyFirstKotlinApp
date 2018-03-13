@@ -17,8 +17,19 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        // If you are not behind an Aptiv proxy, uncomment the following lines
+        // google()
+        // jcenter()
+        // And comment out the following ones
+        jcenter {
+            url "http://10.236.88.232:8088/artifactory/jcenter"
+        }
+        maven {
+            url "http://10.236.88.232:8088/artifactory/ihu-libraries"
+        }
+        maven {
+            url 'http://10.236.88.232:8088/artifactory/maven-google'
+        }
     }
 }
 
